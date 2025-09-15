@@ -1,23 +1,11 @@
 # main links
 main:
-  # - title: "About"
-  #   url: https://mmistakes.github.io/minimal-mistakes/about/
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
-
-  docs:
-  - title: "📝"
-    children:
-      - title: "TIL"
-        url: /categories/til
-        category: TIL
+  - title: "Search"
+    url: /search
 
 sidebar-category:
-  - title: "CATAGORY"
+  - title: "📁 Documents"
     children:
-      - title: "TIL"
-        url: "/TIL"
+      - title: "📂 Til"
+        url: "/Til"
+        category: "Til"
