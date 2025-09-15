@@ -17,14 +17,14 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 # Site Settings
 locale                   : "ko"
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
-title                    : "Lee Jae Sol"
-title_separator          : "|"
-subtitle                 : "📝📝"
+title                    : "📝📝"
+title_separator          : "-"
+subtitle                 : #
 name                     : "Lee Jae Sol"
-description              : "📝📝"
+description              : "기록용 블로그"
 url                      : "https://jaesol0105.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "jaesol0105/posts" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : "jaesol0105/jaesol0105.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     :  # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
@@ -34,7 +34,7 @@ enable_copy_code_button  : # true, false (default)
 copyright                : # "copyright" name, defaults to site.title
 copyright_url            : # "copyright" URL, defaults to site.url
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
+  provider               : "utterances" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
   disqus:
     shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
@@ -45,7 +45,7 @@ comments:
     num_posts            : # 5 (default)
     colorscheme          : # "light" (default), "dark"
   utterances:
-    theme                : "github-dark" # "github-light" (default), "github-dark"
+    theme                : "github-light" # "github-light" (default), "github-dark"
     issue_term           : "pathname" # "pathname" (default)
   giscus:
     repo_id              : # Shown during giscus setup at https://giscus.app
@@ -115,7 +115,7 @@ analytics:
 author:
   name             : "Lee Jae Sol"
   avatar           : "/assets/images/profile.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "기록"
+  bio              : ""
   location         : 
   email            :
   links:
@@ -325,10 +325,8 @@ defaults:
       comments: # true
       share: true
       related: true
-
-       # 카테고리
-  - scope:
-      path: ""  # 모든 페이지에 적용
-    values:
-      sidebar:
-        nav : "docs"
+      sidebar:                  # 추가한 부분
+        nav: "sidebar-category" # 추가한 부분
+      header:
+          overlay_color: "#333"
+          overlay_filter: 0.7 
