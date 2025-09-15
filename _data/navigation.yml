@@ -15,3 +15,9 @@ main:
       - title: "TIL"
         url: /categories/til
         category: TIL
+
+sidebar-category:
+  - title: "CATAGORY"
+    children:
+      - title: "TIL"
+        url: "/TIL"
