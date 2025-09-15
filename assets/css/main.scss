@@ -12,6 +12,169 @@ search: false
 @font-face {
     font-family: 'Escoredream';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-1Thin.woff') format('woff');
-    font-weight: 100;
-    font-display: swap;
+    font-weight: normal;
+    font-style: normal;
+}
+/* system typefaces */
+$serif: Lora, Georgia, Times, serif !default;
+$sans-serif: -apple-system, BlinkMacSystemFont, "GmarketSansMedium", "Noto Sans KR", "Roboto", "Segoe UI",  "Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
+$monospace: Monaco, Consolas, "Lucida Console", monospace !default;
+
+/* sans serif typefaces */
+$sans-serif-narrow: $sans-serif !default;
+$helvetica: Helvetica, "Helvetica Neue", Arial, sans-serif !default;
+
+//수정 이유: 포스팅 영역 크기를 넓게 조정
+$right-sidebar-width-narrow: 100px !default;    // default 200px
+$right-sidebar-width: 200px !default;           // default 300px
+$right-sidebar-width-wide: 250px !default;      // default 400px
+
+$primary-color: #c8af0c !default;
+
+
+
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+
+// --------------------------------------------------------
+/* _sass/minimal-mistakes/_reset.scss  */
+// --------------------------------------------------------
+
+//수정 이유: 폰트 크기 조정
+
+html {
+    font-size: 16px;                    // Default 16px;
+  
+    @include breakpoint($medium) {
+      font-size: 14px;                  // Default 18px;
+    }
+  
+    @include breakpoint($large) {
+      font-size: 16px;                  // Default 20px;
+    }
+  
+    @include breakpoint($x-large) {
+      font-size: 18px;                  // Default 22px;
+    }
+  
+  }
+
+  
+
+// --------------------------------------------------------
+/* _sass/minimal-mistakes/_base.scss  */
+// --------------------------------------------------------
+
+//수정 이유: 포스팅 양쪽 정렬 , 하이퍼 링크에 줄 없애기
+
+p {
+    text-align: justify;
+    word-break: break-all;
+  }
+
+  
+a {
+    text-decoration: none; 
+}
+
+
+.page__content{
+  h2, h3{
+    color: #F8DC25;
+  }
+
+  p {
+    margin-bottom: 12px;  /* 문단과 목록 사이 간격 */
+  }
+  
+  ul {
+    margin-top: 6px;  /* 목록과 문단 사이 간격 */
+  }
+  
+  ul li {
+    margin-bottom: 6px;  /* 각 항목 간 여백 */
+  }
+  
+  ul li:last-child {
+    margin-bottom: 0;  /* 마지막 항목은 여백 제거 */
+  }
+  
+  strong{
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+    font-weight: normal; /* 굵기 제거 */
+    font-size: inherit;
+    //border: 2px solid #988D7D; /* 테두리 두께, 스타일, 색상 */
+    box-shadow : rgb(133, 144, 150) 0px -1px 0px 0px inset;
+    border: 1px solid;
+    border-radius: 5px; /* 모서리를 둥글게 */
+    background-color: var(--darkreader-background-f0f0f0, #303538);
+    border-top-color: var(--darkreader-border-6f777d, #988d7d);
+    border-right-color: var(--darkreader-border-6f777d, #988d7d);
+    border-bottom-color: var(--darkreader-border-6f777d, #988d7d);
+    border-left-color: var(--darkreader-border-6f777d, #988d7d);
+    padding: 2.5px; /* 테두리 안쪽 여백 */    
+  }
+}
+
+
+// --------------------------------------------------------
+/* _sass/minimal-mistakes/_archive.scss */
+// --------------------------------------------------------
+
+//수정 이유: 카테고리를 클릭 할 때 포스팅 제목 앞에 폴더 아이콘 표시 
+
+.archive__item-title {
+    margin-bottom: 0.25em;
+    font-family: $sans-serif-narrow;
+    line-height: initial;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  
+    a{
+      padding-left: 35px;
+    }
+  
+    a[rel="permalink"]::before {
+      content: '📂';
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+    }
+  
+    a + a {
+      opacity: 0.5;
+    }
+}
+  
+//
+// 메뉴 호버링 효과 추가 하기
+// -include/nav_list 코드의 li를 myli로
+//
+#myli  a{
+    text-decoration: none ;
+    display: block;
+    color: #fff;
+    padding: 8px 8px 8px 8px;
+    font-size: small;
+    //font-weight: bold;
+    //border-bottom: 1px solid #fff;
+}
+
+#myli  a:hover {
+    padding: 8px 10px 8px 10px;
+    //background-color: red;
+    background-color: #c8af0c;
+    color: #fff;
+}
+
+
+#myli  a.active {
+    padding: 8px 15px 8px 15px !important;;
+    font-weight: bold !important;;
+    color: #c8af0c;
 }
