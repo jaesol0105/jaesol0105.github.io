@@ -6,6 +6,6 @@ main:
 sidebar-category:
   - title: "📁 Documents"
     children:
-      - title: "📂 Til"
-        url: "/Til"
-        category: "Til"
+      - title: "📂 Flutter"
+        url: "/Flutter"
+        category: "Flutter"
