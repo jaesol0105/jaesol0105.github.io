@@ -20,7 +20,7 @@ rtl                      : # true, false (default) # turns direction of the page
 title                    : "📝📝"
 title_separator          : "-"
 subtitle                 : #
-name                     : "Lee Jae Sol"
+name                     : "I Jae Sol"
 description              : "기록용 블로그"
 url                      : "https://jaesol0105.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
