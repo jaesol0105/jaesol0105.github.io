@@ -158,19 +158,6 @@ a {
       opacity: 0.5;
     }
 }
-
-.sidebar {
-  position: fixed;
-  top: 100px;
-  right: 20px;
-  width: 220px;    /* 원하는 값 */
-  max-height: calc(100vh - 120px);
-  overflow-y: auto;
-}
-
-.page {
-  margin-right: 260px; /* 사이드바 공간만큼 본문 밀기 */
-}
   
 //
 // 메뉴 호버링 효과 추가 하기
