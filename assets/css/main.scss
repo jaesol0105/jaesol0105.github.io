@@ -115,6 +115,15 @@ a {
 }
 
 
+/* 제목/헤더 부분도 본문과 맞춰 넓히기 */
+.page__header,
+.page__hero {
+  max-width: 1400px;   /* 위의 .page__content와 같은 값으로 */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 // --------------------------------------------------------
 /* _sass/minimal-mistakes/_archive.scss */
 // --------------------------------------------------------
