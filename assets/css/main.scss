@@ -31,10 +31,24 @@ $right-sidebar-width-wide: 220px;
 $primary-color: #c8af0c !default;
 
 
+/* 3) 커스텀 CSS — 제목 & 본문 최대 폭 설정 */
+.page__header,
+.page__hero,
+.page__hero--overlay .wrapper,
+.page__title,
+.page__meta,
+.page__lead,
+.page__content,
+.page__inner-wrap {
+  max-width: 1400px !important;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
-@import "minimal-mistakes"; // main partials
+/* 전체 래퍼 */
+.wrapper {
+  max-width: 1600px;
+}
 
 
 // --------------------------------------------------------
@@ -111,22 +125,6 @@ a {
     border-left-color: var(--darkreader-border-6f777d, #988d7d);
     padding: 2.5px; /* 테두리 안쪽 여백 */    
   }
-}
-
-
-/* 제목/헤더 영역도 본문과 동일 폭으로 넓히기 */
-.page__header,
-.page__hero,
-.page__title,
-.page__meta {
-  max-width: 1400px;      
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* 전체 wrapper 확장 (넓은 화면에서 중앙 정렬 유지) */
-.wrapper {
-  max-width: 1400px;     
 }
 
 
